@@ -8,8 +8,6 @@ import { useStateValue } from "./StateProvider";
 function Header() {
 	const [{ basket }, dispatch] = useStateValue();
 
-	var c = "1" * 2;
-
 	return (
 		<div className="header">
 			console.log(c);
@@ -25,12 +23,13 @@ function Header() {
 				<SearchIcon className="header__searchIcon" />
 			</div>
 			<div className="header__nav">
-				<div className="header__option">
-					<span className="header__optionLineOne">Hello Dima</span>
-					<Link to="/login">
+				<Link to="/login">
+					<div className="header__option">
+						<span className="header__optionLineOne">Hello Dima</span>
 						<span className="header__optionLineTwo">Sign in</span>
-					</Link>
-				</div>
+					</div>
+				</Link>
+
 				<div className="header__option">
 					<span className="header__optionLineOne">Returns</span>
 					<span className="header__optionLineTwo">& Orders </span>
