@@ -8,8 +8,11 @@ import { useStateValue } from "./StateProvider";
 function Header() {
 	const [{ basket }, dispatch] = useStateValue();
 
+	var c = "1" * 2;
+
 	return (
 		<div className="header">
+			console.log(c);
 			<Link to="/">
 				<img
 					className="header__logo"
@@ -17,16 +20,16 @@ function Header() {
 					alt=""
 				/>
 			</Link>
-
 			<div className="header__search">
 				<input className="header__searchInput" type="text" />
 				<SearchIcon className="header__searchIcon" />
 			</div>
-
 			<div className="header__nav">
 				<div className="header__option">
 					<span className="header__optionLineOne">Hello Dima</span>
-					<span className="header__optionLineTwo">Sign in</span>
+					<Link to="/login">
+						<span className="header__optionLineTwo">Sign in</span>
+					</Link>
 				</div>
 				<div className="header__option">
 					<span className="header__optionLineOne">Returns</span>
