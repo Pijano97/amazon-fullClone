@@ -1,5 +1,6 @@
 export const initialState = {
 	basket: [],
+	user: null,
 };
 
 // Selector - go trough whole basket, for each item add price to amount( amount is set to 0)
@@ -23,12 +24,18 @@ const reducer = (state, action) => {
 				newBasket.splice(index, 1);
 			} else {
 				console.warn(
-					"Cant remove product (id: ${action.id}) as its not in basket!"
+					`Cant remove product (id: ${action.id}) as its not in basket!`
 				);
 			}
 			return {
 				...state,
 				basket: newBasket,
+			};
+
+		case "SET_USER":
+			return {
+				...state,
+				user: action.user,
 			};
 		default:
 			return state;
