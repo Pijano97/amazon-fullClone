@@ -1,8 +1,9 @@
 ## About clone
 
-The website(payment) is not working properly because I was not able to\
-upload cloud functions to the firebase. (additional payment required)\
-Everything will work localy.
+Payment option dose not work properly because \
+cloud functions could not be upload to the firebase\
+without additional payment\
+Everything will work locally.
 
 You can use account(@ Account test) to test it.(without payment function)
 
